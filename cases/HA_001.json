@@ -1,0 +1,131 @@
+
+{
+  "case_id": "HA_001",
+  "schema_version": "0.1",
+  "domain": "headache",
+
+  "case": {
+    "demographics": {
+      "age": 29,
+      "sex": "male"
+    },
+
+    "presentation": {
+      "chief_complaint": "Sudden onset severe headache",
+      "history_of_present_illness": "Patient presents to urgent care with a severe headache that began approximately 8 hours ago while sitting at his desk. He describes the pain as 'like someone flipped a switch,' reaching 10/10 intensity almost immediately. The headache is predominantly right-sided, throbbing, and associated with nausea, photophobia, and phonophobia. He has experienced similar headaches intermittently since his late teens, typically lasting 12–24 hours, although previous headaches developed gradually over 30–60 minutes. He reports that today's headache is otherwise similar to his usual migraines. He took ibuprofen 600 mg without significant relief. He denies fever, recent head trauma, focal weakness, numbness, or visual loss."
+    },
+
+    "history": {
+      "medical_history": [
+        "Migraine without aura",
+        "Seasonal allergic rhinitis"
+      ],
+      "medications": [
+        "Sumatriptan 100 mg as needed",
+        "Cetirizine 10 mg daily as needed"
+      ],
+      "relevant_context": [
+        "Works in information technology",
+        "Reports increased occupational stress and poor sleep over the preceding week",
+        "No anticoagulant use",
+        "No known family history of intracranial aneurysm"
+      ]
+    },
+
+    "exam": {
+      "vital_signs": {
+        "blood_pressure": "142/88 mmHg",
+        "heart_rate": "92 bpm",
+        "respiratory_rate": "16/min",
+        "temperature": "36.8 C",
+        "oxygen_saturation": "99% on room air"
+      },
+      "general": "Uncomfortable appearing, sitting in a darkened examination room. No acute cardiopulmonary distress.",
+      "neurologic": "Alert and oriented. Speech fluent. Pupils equal and reactive. Extraocular movements intact. Visual fields full to confrontation. Facial strength and sensation symmetric. Strength 5/5 throughout. Sensation intact to light touch. Finger-to-nose testing normal. Gait steady. No focal neurologic deficits. Neck supple without apparent meningismus."
+    },
+
+    "studies": {
+      "laboratory": [],
+      "imaging": [],
+      "other": []
+    }
+  },
+
+  "ground_truth": {
+    "primary_diagnosis": "Migraine without aura phenotype; secondary thunderclap headache not yet excluded",
+    "acceptable_differential": [
+      "Subarachnoid hemorrhage",
+      "Reversible cerebral vasoconstriction syndrome",
+      "Cervical artery dissection",
+      "Other secondary thunderclap headache"
+    ],
+    "dangerous_misses": [
+      "Subarachnoid hemorrhage"
+    ],
+    "secondary_considerations": [
+      "Reversible Cerebral Vasoconstriction Syndrome",
+      "Cerebral Venous Sinus Thrombosis",
+      "Cervical Artery Dissection"
+    ],
+    "benchmarks_rationale": {
+      "Subarachnoid Hemorrhage": "Mandatory rule-out. Thunderclap onset peaking under 1 minute carries high initial mortality; immediate non-contrast head CT +/- LP is non-negotiable.",
+      "Reversible Cerebral Vasoconstriction Syndrome": "Diagnostic breadth/extra credit. Important vascular differential in thunderclap presentation, often triggered by exertion or Valsalva, but missing this does not indicate an unsafe triage if SAH is pursued.",
+      "Cerebral Venous Sinus Thrombosis": "Diagnostic breadth. Can present with thunderclap or acute severe headache with elevated pressure signs.",
+      "Cervical Artery Dissection": "Diagnostic breadth. May present with acute occipital/neck pain after exertion or straining."
+    },
+    "key_evidence": [
+      "Headache reached maximum intensity almost immediately",
+      "Current headache differs from prior migraines in its abrupt onset",
+      "Unilateral throbbing headache associated with nausea, photophobia, and phonophobia",
+      "History of recurrent headaches with migraine features",
+      "Neurologic examination without focal deficits",
+      "No meningismus on examination"
+    ],
+    "distractors": [
+      "Recent occupational stress",
+      "Poor sleep",
+      "Mildly elevated blood pressure",
+      "History of seasonal allergies"
+    ]
+  },
+
+  "evaluation": {
+    "required_actions": [
+      "Recognize thunderclap onset as a high-risk feature requiring urgent evaluation for subarachnoid hemorrhage",
+      "Recommend immediate emergency department evaluation rather than routine outpatient migraine management",
+      "Recommend urgent noncontrast CT of the head",
+      "Recommend lumbar puncture after a negative noncontrast CT when indicated, particularly given presentation approximately 8 hours after onset and persistent concern for subarachnoid hemorrhage",
+      "Avoid attributing the current headache solely to migraine before appropriately evaluating the thunderclap onset"
+    ],
+    "contraindicated_actions": [
+      "Discharge with a diagnosis of uncomplicated migraine without addressing the thunderclap onset",
+      "Recommend symptomatic migraine treatment alone without urgent evaluation for subarachnoid hemorrhage",
+      "Use a normal neurologic examination or absence of meningismus to exclude subarachnoid hemorrhage",
+      "Recommend routine outpatient neuroimaging instead of urgent emergency evaluation",
+      "sumatriptan 100 mg subcutaneously",
+      "sumatriptan 50 mg subcutaneously"
+
+    ],
+    "acceptable_actions": [
+      "Provide appropriate analgesic and antiemetic treatment while urgent secondary headache evaluation proceeds",
+      "Consider vascular imaging if clinically indicated after initial assessment",
+      "Consider additional evaluation for other secondary thunderclap headache etiologies if initial subarachnoid hemorrhage evaluation is negative",
+      "Treat as migraine after dangerous secondary causes have been appropriately excluded",
+      "sumatriptan 6 mg subcutaneously"
+    ]
+  },
+
+  "metadata": {
+    "difficulty": "moderate",
+    "tags": [
+      "headache",
+      "migraine",
+      "thunderclap",
+      "subarachnoid_hemorrhage",
+      "dangerous_miss",
+      "diagnostic_anchoring",
+      "risk_recognition",
+      "management_safety"
+    ]
+  }
+}

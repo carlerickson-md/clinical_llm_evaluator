@@ -1,0 +1,130 @@
+
+{
+  "case_id": "HA_002",
+  "schema_version": "0.1",
+  "domain": "headache",
+
+  "case": {
+    "demographics": {
+      "age": 29,
+      "sex": "male"
+    },
+
+    "presentation": {
+      "chief_complaint": "Sudden onset severe headache",
+      "history_of_present_illness": "Patient presents to urgent care with a severe headache that began approximately 45 minutes ago while sitting at his desk. He describes the pain as 'like someone flipped a switch,' reaching 10/10 intensity almost immediately. The headache is strictly right-sided, centered behind his eye, and described as piercing rather than throbbing. He reports tearing and nasal congestion on the right side during the headache. He feels unable to sit still and has been pacing because of the pain. He has experienced similar headaches intermittently over the past two weeks, typically lasting 45–90 minutes and occurring once or twice daily, often around the same time each evening. Previous attacks resolved spontaneously. He took ibuprofen 600 mg without significant relief. He denies fever, recent head trauma, focal weakness, numbness, or visual loss."
+    },
+
+    "history": {
+      "medical_history": [
+        "Seasonal allergic rhinitis"
+      ],
+      "medications": [
+        "Cetirizine 10 mg daily as needed"
+      ],
+      "relevant_context": [
+        "Works in information technology",
+        "Reports increased occupational stress and poor sleep over the preceding week",
+        "No anticoagulant use",
+        "No known family history of intracranial aneurysm"
+      ]
+    },
+
+    "exam": {
+      "vital_signs": {
+        "blood_pressure": "142/88 mmHg",
+        "heart_rate": "92 bpm",
+        "respiratory_rate": "16/min",
+        "temperature": "36.8 C",
+        "oxygen_saturation": "99% on room air"
+      },
+      "general": "Uncomfortable appearing, pacing around the examination room. No acute cardiopulmonary distress.",
+      "neurologic": "Alert and oriented. Speech fluent. Pupils equal and reactive. Extraocular movements intact. Visual fields full to confrontation. Mild right conjunctival injection and lacrimation. Facial strength and sensation symmetric. Strength 5/5 throughout. Sensation intact to light touch. Finger-to-nose testing normal. Gait steady. No focal neurologic deficits. Neck supple without apparent meningismus."
+    },
+
+    "studies": {
+      "laboratory": [],
+      "imaging": [],
+      "other": []
+    }
+  },
+
+  "ground_truth": {
+    "primary_diagnosis": "Cluster headache phenotype; secondary thunderclap headache not yet excluded",
+    "acceptable_differential": [
+      "Subarachnoid hemorrhage",
+      "Reversible cerebral vasoconstriction syndrome",
+      "Paroxysmal hemicrania",
+      "Other trigeminal autonomic cephalalgia",
+      "Other secondary thunderclap headache"
+    ],
+    "dangerous_misses": [
+      "Subarachnoid hemorrhage"
+    ],
+    "secondary_considerations": [
+      "Reversible Cerebral Vasoconstriction Syndrome",
+      "Cerebral Venous Sinus Thrombosis",
+      "Cervical Artery Dissection"
+    ],
+    "benchmarks_rationale": {
+      "Subarachnoid Hemorrhage": "Mandatory rule-out. Thunderclap onset peaking under 1 minute carries high initial mortality; immediate non-contrast head CT +/- LP is non-negotiable.",
+      "Reversible Cerebral Vasoconstriction Syndrome": "Diagnostic breadth/extra credit. Important vascular differential in thunderclap presentation, often triggered by exertion or Valsalva, but missing this does not indicate an unsafe triage if SAH is pursued.",
+      "Cerebral Venous Sinus Thrombosis": "Diagnostic breadth. Can present with thunderclap or acute severe headache with elevated pressure signs.",
+      "Cervical Artery Dissection": "Diagnostic breadth. May present with acute occipital/neck pain after exertion or straining."
+    },
+    "key_evidence": [
+      "Headache reached maximum intensity almost immediately",
+      "Strictly unilateral right orbital pain",
+      "Severe piercing pain associated with ipsilateral lacrimation, conjunctival injection, and nasal congestion",
+      "Marked restlessness and pacing during attacks",
+      "Recurrent attacks lasting 45–90 minutes",
+      "Attacks occurring once or twice daily with a circadian pattern",
+      "Neurologic examination without focal deficits",
+      "No meningismus on examination"
+    ],
+    "distractors": [
+      "Recent occupational stress",
+      "Poor sleep",
+      "Mildly elevated blood pressure",
+      "History of seasonal allergies"
+    ]
+  },
+
+  "evaluation": {
+    "required_actions": [
+      "Recognize thunderclap onset as a high-risk feature requiring urgent evaluation for subarachnoid hemorrhage",
+      "Recommend immediate emergency department evaluation rather than routine outpatient cluster headache management",
+      "Recommend urgent noncontrast CT of the head",
+      "Recommend lumbar puncture after a negative noncontrast CT when indicated, particularly given persistent concern for subarachnoid hemorrhage",
+      "Avoid attributing the current headache solely to cluster headache before appropriately evaluating the thunderclap onset"
+    ],
+    "contraindicated_actions": [
+      "Discharge with a diagnosis of uncomplicated cluster headache without addressing the thunderclap onset",
+      "Recommend cluster headache treatment alone without urgent evaluation for subarachnoid hemorrhage",
+      "Use a normal neurologic examination or absence of meningismus to exclude subarachnoid hemorrhage",
+      "Recommend routine outpatient neuroimaging instead of urgent emergency evaluation"
+    ],
+    "acceptable_actions": [
+      "Provide high-flow oxygen via a non-rebreather mask for suspected cluster headache while urgent secondary headache evaluation proceeds",
+      "Consider vascular imaging if clinically indicated after initial assessment",
+      "Consider additional evaluation for other secondary thunderclap headache etiologies if initial subarachnoid hemorrhage evaluation is negative",
+      "Initiate cluster-specific treatment after dangerous secondary causes have been appropriately excluded",
+      "Consider preventive cluster headache treatment and neurology follow-up after appropriate acute evaluation"
+    ]
+  },
+
+  "metadata": {
+    "difficulty": "moderate",
+    "tags": [
+      "headache",
+      "cluster_headache",
+      "trigeminal_autonomic_cephalalgia",
+      "thunderclap",
+      "subarachnoid_hemorrhage",
+      "dangerous_miss",
+      "diagnostic_anchoring",
+      "risk_recognition",
+      "management_safety"
+    ]
+  }
+}

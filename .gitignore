@@ -1,0 +1,27 @@
+# Bytecode and cache
+__pycache__/
+*.py[cod]
+*.pyc
+
+# IDE / Editor configuration
+.vscode/
+
+# Local outputs, dumps, and logs
+outputs/
+*.log
+generated_*.txt
+cases/approved_synonyms.json
+cases/benchmark_revision_flags.json
+
+# Virtual environments (if you use venv or virtualenv)
+.venv/
+env/
+venv/
+
+# Environment variables & API keys
+.env
+*.env
+
+# OS metadata
+Thumbs.db
+.DS_Store

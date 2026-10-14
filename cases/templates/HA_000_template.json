@@ -1,0 +1,54 @@
+{
+  "case_id": "HA_001",
+  "schema_version": "0.1",
+  "domain": "headache",
+
+  "case": {
+    "demographics": {
+      "age": null,
+      "sex": ""
+    },
+
+    "presentation": {
+      "chief_complaint": "",
+      "history_of_present_illness": ""
+    },
+
+    "history": {
+      "medical_history": [],
+      "medications": [],
+      "relevant_context": []
+    },
+
+    "exam": {
+      "vital_signs": {},
+      "general": "",
+      "neurologic": ""
+    },
+
+    "studies": {
+      "laboratory": [],
+      "imaging": [],
+      "other": []
+    }
+  },
+
+  "ground_truth": {
+    "primary_diagnosis": "",
+    "acceptable_differential": [],
+    "dangerous_misses": [],
+    "key_evidence": [],
+    "distractors": []
+  },
+
+  "evaluation": {
+    "required_actions": [],
+    "contraindicated_actions": [],
+    "acceptable_actions": []
+  },
+
+  "metadata": {
+    "difficulty": "",
+    "tags": []
+  }
+}

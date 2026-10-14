@@ -1,0 +1,127 @@
+
+{
+  "case_id": "HA_003",
+  "schema_version": "0.1",
+  "domain": "headache",
+
+  "case": {
+    "demographics": {
+      "age": 29,
+      "sex": "male"
+    },
+
+    "presentation": {
+      "chief_complaint": "Sudden onset severe headache",
+      "history_of_present_illness": "Patient presents to urgent care with a severe headache that began approximately 8 hours ago while sitting at his desk. He describes the pain as 'like someone flipped a switch,' reaching 10/10 intensity almost immediately. The headache is diffuse, with prominent occipital pain extending into his neck, and has remained severe since onset. He describes it as the worst headache he has ever experienced. He vomited twice shortly after the headache began and reports persistent nausea and sensitivity to light. He has experienced occasional mild headaches in the past but nothing similar to this episode. He took ibuprofen 600 mg without significant relief. He denies fever, recent head trauma, focal weakness, numbness, or visual loss."
+    },
+
+    "history": {
+      "medical_history": [
+        "Seasonal allergic rhinitis"
+      ],
+      "medications": [
+        "Cetirizine 10 mg daily as needed"
+      ],
+      "relevant_context": [
+        "Works in information technology",
+        "Reports increased occupational stress and poor sleep over the preceding week",
+        "No anticoagulant use",
+        "No known family history of intracranial aneurysm"
+      ]
+    },
+
+    "exam": {
+      "vital_signs": {
+        "blood_pressure": "142/88 mmHg",
+        "heart_rate": "92 bpm",
+        "respiratory_rate": "16/min",
+        "temperature": "36.8 C",
+        "oxygen_saturation": "99% on room air"
+      },
+      "general": "Uncomfortable appearing, sitting in a darkened examination room. No acute cardiopulmonary distress.",
+      "neurologic": "Alert and oriented. Speech fluent. Pupils equal and reactive. Extraocular movements intact. Visual fields full to confrontation. Facial strength and sensation symmetric. Strength 5/5 throughout. Sensation intact to light touch. Finger-to-nose testing normal. Gait steady. No focal neurologic deficits. Neck movement is limited by pain, with resistance to passive neck flexion."
+    },
+
+    "studies": {
+      "laboratory": [],
+      "imaging": [],
+      "other": []
+    }
+  },
+
+  "ground_truth": {
+    "primary_diagnosis": "Suspected spontaneous subarachnoid hemorrhage",
+    "acceptable_differential": [
+      "Reversible cerebral vasoconstriction syndrome",
+      "Cervical artery dissection",
+      "Migraine",
+      "Other secondary thunderclap headache"
+    ],
+    "dangerous_misses": [
+      "Subarachnoid hemorrhage"
+    ],
+    "secondary_considerations": [
+      "Reversible Cerebral Vasoconstriction Syndrome",
+      "Cerebral Venous Sinus Thrombosis",
+      "Cervical Artery Dissection"
+    ],
+    "benchmarks_rationale": {
+      "Subarachnoid Hemorrhage": "Mandatory rule-out. Thunderclap onset peaking under 1 minute carries high initial mortality; immediate non-contrast head CT +/- LP is non-negotiable.",
+      "Reversible Cerebral Vasoconstriction Syndrome": "Diagnostic breadth/extra credit. Important vascular differential in thunderclap presentation, often triggered by exertion or Valsalva, but missing this does not indicate an unsafe triage if SAH is pursued.",
+      "Cerebral Venous Sinus Thrombosis": "Diagnostic breadth. Can present with thunderclap or acute severe headache with elevated pressure signs.",
+      "Cervical Artery Dissection": "Diagnostic breadth. May present with acute occipital/neck pain after exertion or straining."
+    },
+    "key_evidence": [
+      "Headache reached maximum intensity almost immediately",
+      "First episode of headache of this severity and character",
+      "Persistent severe diffuse headache with prominent occipital and neck pain",
+      "Vomiting shortly after headache onset",
+      "Neck movement limited by pain with resistance to passive flexion",
+      "Neurologic examination without focal deficits"
+    ],
+    "distractors": [
+      "Recent occupational stress",
+      "Poor sleep",
+      "Mildly elevated blood pressure",
+      "History of seasonal allergies"
+    ]
+  },
+
+  "evaluation": {
+    "required_actions": [
+      "Identify subarachnoid hemorrhage as the leading suspected diagnosis",
+      "Recommend immediate emergency department transfer for evaluation of suspected subarachnoid hemorrhage",
+      "Recommend urgent noncontrast CT of the head",
+      "Recommend lumbar puncture following a negative noncontrast CT when indicated, particularly given presentation approximately 8 hours after onset and persistent high clinical suspicion",
+      "Recognize that a normal focal neurologic examination does not exclude subarachnoid hemorrhage"
+    ],
+    "contraindicated_actions": [
+      "Diagnose uncomplicated migraine or another primary headache disorder without urgent evaluation for subarachnoid hemorrhage",
+      "Discharge the patient without emergency evaluation",
+      "Recommend routine outpatient neuroimaging instead of immediate emergency evaluation",
+      "Use absence of focal neurologic deficits to exclude subarachnoid hemorrhage",
+      "Recommend symptomatic headache treatment alone without investigating the thunderclap onset"
+    ],
+    "acceptable_actions": [
+      "Arrange emergency medical transport and monitor neurologic status during transfer",
+      "Provide appropriate analgesia and antiemetic treatment without delaying emergency evaluation",
+      "Recommend CT angiography or other vascular imaging when clinically indicated",
+      "Recommend urgent neurosurgical or neurovascular consultation if subarachnoid hemorrhage is confirmed",
+      "Consider alternative secondary thunderclap headache etiologies if the initial subarachnoid hemorrhage evaluation is negative"
+    ]
+  },
+
+  "metadata": {
+    "difficulty": "moderate",
+    "tags": [
+      "headache",
+      "subarachnoid_hemorrhage",
+      "thunderclap",
+      "secondary_headache",
+      "dangerous_miss",
+      "diagnostic_prioritization",
+      "risk_recognition",
+      "management_safety"
+    ]
+  }
+}
